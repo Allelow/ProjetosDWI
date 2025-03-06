@@ -1,7 +1,60 @@
-/* *{
-    
+*,
+*::before,
+*::after{
+  display: block;
+  margin: 0;
+  padding: 0;  
 }
 
 body {
-    background: green;
-} */
+  background: green;
+  justify-content: center;
+  text-align: center;
+  color: rgb(32, 32, 32);
+}
+
+nav{
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0px 2px 5px 0 rgb(95, 94, 94);
+}
+
+.titulo-receita{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+& .comenteCTA{
+  color: rgb(253, 104, 4);
+}
+.avalieCTA{
+  align-self: center;
+  display: flex;
+  padding: .5rem;
+  border: .5px thin rgb(32, 32, 32);
+  border-radius: 45px;
+  width: fit-content;
+
+  background: rgb(253, 104, 4);
+  color: white;
+}
+}
+
+.foto-receita{
+ width: 700px;
+ height: 360px;
+ justify-content: start;
+ align-items: start; 
+}
+
+.action-btns{
+  display: flex;
+  justify-content: space-between;
+
+  & .fav-btn, .share-btn, .print-btn{
+    display: inherit;
+  }
+}
