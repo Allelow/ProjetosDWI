@@ -4,6 +4,10 @@
   display: block;
   margin: 0;
   padding: 0;  
+  
+  & img+p{
+    margin-left: .5rem;
+  }
 }
 
 body {
@@ -27,15 +31,13 @@ nav{
   color: orangered
 }
 
+
 .grey-bg{
   display: flex;
   justify-content: start;
   text-align: start;
   border: 1px solid grey;
   background: rgb(173, 173, 173);
-    & img+p{
-      margin-left: .5rem;
-    }
 }
 
 .titulo-receita{
@@ -47,6 +49,7 @@ nav{
   color: rgb(253, 104, 4);
 }
 }
+
 .avalieCTA{
   justify-self: center;
   align-self: center;
@@ -89,14 +92,18 @@ nav{
   }
 }
 
-/* FIXME: */
-.lista-ingrdientes{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 2fr);
 
-  & item-li{
+.lista-ingredientes{
+  display: grid;
+  padding: 2rem;
+  grid-auto-rows: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+
+  & .item-li{
     display: flex;
-    width: #fc3f3f;
+    align-items: center;
+    background: #fc3f3f;
   }
 }
 
@@ -118,20 +125,21 @@ nav{
           width: 2.5rem;
           height: 2.5rem;
           border-radius: 45px;
+          box-shadow: -1px 1.5px #555;
           align-content: center;
         }
       }
     }
 }
 
-/* TODO: */
 .note{
-  background: yellow;
+  background: linear-gradient(to right, rgb(253, 104, 4) 5%, rgb(173, 173, 173) 5% 100%);
   border-radius: 5px;
   
   & .notations{
     display: flex;
-    
+    align-items: center;
+
     & .note-text{
       display: flex;
       flex-direction: column;
@@ -141,4 +149,14 @@ nav{
       }
     }
   } 
+}
+/* TODO: */
+.lista-categorias{
+  display: flex;
+  justify-content: start;
+  gap: .5rem;
+
+  & .item-categoria{
+    background-color: aqua;
+  }
 }
