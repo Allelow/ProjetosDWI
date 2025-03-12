@@ -10,27 +10,42 @@
   }
 }
 
+div>img{
+  max-height: 100%;
+  image-resolution: 1/1;
+}
+
+.destaque{
+  font-weight: bolder;
+  color: orangered
+} 
 body {
   background: green;
   justify-content: center;
   text-align: center;
   color: rgb(32, 32, 32);
 }
-
+/* TODO: justify-content*/
 nav{
   display: flex;
   flex: 1;
   justify-content: space-around;
   align-items: center;
   width: 100%;
+  height: 3em;
   box-shadow: 0px 2px 5px 0 rgb(95, 94, 94);
+
+  & div{
+    display: flex;
+    height: 75%;
+    width: max-content;
+    gap: 1rem;
+  }
 }
 
-.destaque{
-  font-weight: bolder;
-  color: orangered
+.invert{
+  filter: invert(100%);
 }
-
 
 .grey-bg{
   display: flex;
@@ -51,14 +66,15 @@ nav{
 }
 
 .avalieCTA{
-  justify-self: center;
   align-self: center;
+  align-items: center;
   display: flex;
-  padding: .5rem;
+  padding: .5rem .75rem;
+  width: fit-content;
+  height: 1rem;
+  
   border: .5px thin rgb(32, 32, 32);
   border-radius: 45px;
-  width: fit-content;
-
   background: rgb(253, 104, 4);
   color: white;
 }
@@ -72,10 +88,35 @@ nav{
 
 .action-btns{
   display: flex;
+  padding: 1rem;
+  height: 3rem;
   justify-content: space-between;
+  align-items: center;
 
   & .fav-btn, .share-btn, .print-btn{
     display: inherit;
+    height: inherit;
+    gap: .5rem;
+    align-items: center;
+
+    & .circle{
+            height: 1.5rem;
+      padding: .3rem;
+      border-radius: 45px;
+
+      background-color: rgb(199, 199, 199);
+      box-shadow: -0.5px 1.5px 3px #868686, -0.5px 1.5px 4px 2px #979797;
+    }
+  }
+}
+
+.tempo-preparo{
+  padding: .25rem;
+  height: 3rem;
+  align-items: center;
+
+  & img {
+    height: 75%;
   }
 }
 
@@ -89,6 +130,7 @@ nav{
     height: 3rem;
     border-radius: 45px;
     background: yellow;
+    overflow: hidden;
   }
 }
 
@@ -103,7 +145,7 @@ nav{
   & .item-li{
     display: flex;
     align-items: center;
-    background: #fc3f3f;
+    text-align: start;
   }
 }
 
@@ -122,8 +164,8 @@ nav{
         
         & .item-mp{
           background: yellow;
-          width: 2.5rem;
-          height: 2.5rem;
+          min-width: 2.5rem;
+          min-height: 2.5rem;
           border-radius: 45px;
           box-shadow: -1px 1.5px #555;
           align-content: center;
@@ -150,13 +192,17 @@ nav{
     }
   } 
 }
-/* TODO: */
+
 .lista-categorias{
   display: flex;
   justify-content: start;
   gap: .5rem;
+  flex-wrap: wrap;
 
   & .item-categoria{
-    background-color: aqua;
+    border-radius: 20px;
+    padding: .25rem .5rem;
+    background-color: rgb(199, 199, 199);
+    box-shadow: -0.5px 1.5px 3px #868686, -0.5px 1.5px 4px 2px #979797;
   }
 }
