@@ -10,37 +10,62 @@
   }
 }
 
-div>img{
+img{
   max-height: 100%;
   image-resolution: 1/1;
+}
+
+.circle{
+  height: 1.5rem;
+padding: .3rem;
+border-radius: 45px;
+
+background-color: #fff;
+box-shadow: -0.5px 1.5px 3px #868686, -0.5px 1.5px 4px 2px #979797;
 }
 
 .destaque{
   font-weight: bolder;
   color: orangered
 } 
-body {
-  background: green;
-  justify-content: center;
+body{
+  display: flex;
+  flex-direction: column;
+  background: #fff;
   text-align: center;
   color: rgb(32, 32, 32);
+
+  div{
+    margin: .5rem;
+  }
 }
 /* TODO: justify-content*/
 nav{
   display: flex;
-  flex: 1;
-  justify-content: space-around;
+  justify-content: space-between ;
   align-items: center;
   width: 100%;
   height: 3em;
-  box-shadow: 0px 2px 5px 0 rgb(95, 94, 94);
+  box-shadow: 0px 2px 5px 0 #5f5e5e;
 
-  & div{
+  & div, div div{
     display: flex;
     height: 75%;
     width: max-content;
     gap: 1rem;
+
   }
+
+  .left{
+    align-items: center;
+  }
+  .right img{
+    height: 100%;
+  }
+  .right, .left .mag-ico{
+    box-shadow: 0px 1px 3px #5f5e5e;
+  }
+
 }
 
 .invert{
@@ -76,14 +101,22 @@ nav{
   border: .5px thin rgb(32, 32, 32);
   border-radius: 45px;
   background: rgb(253, 104, 4);
-  color: white;
+  color: #fff;
 }
 
 .foto-receita{
- width: 700px;
- height: 360px;
- justify-content: start;
- align-items: start; 
+ display: flex;
+ width: 100%;
+ min-height: 200px;
+ max-height: fit-content;
+ justify-items: center;
+ align-items: start;
+ 
+ & img{
+  width: 50%;
+  image-rendering: crisp-edges;
+  image-resolution: 1/1;
+ }
 }
 
 .action-btns{
@@ -99,18 +132,11 @@ nav{
     gap: .5rem;
     align-items: center;
 
-    & .circle{
-            height: 1.5rem;
-      padding: .3rem;
-      border-radius: 45px;
-
-      background-color: rgb(199, 199, 199);
-      box-shadow: -0.5px 1.5px 3px #868686, -0.5px 1.5px 4px 2px #979797;
-    }
   }
 }
 
 .tempo-preparo{
+  display: flex;
   padding: .25rem;
   height: 3rem;
   align-items: center;
@@ -129,7 +155,6 @@ nav{
     width: 3rem;
     height: 3rem;
     border-radius: 45px;
-    background: yellow;
     overflow: hidden;
   }
 }
@@ -146,6 +171,12 @@ nav{
     display: flex;
     align-items: center;
     text-align: start;
+    height: 2.5rem;
+  
+      & img{
+        height: 2.5rem;
+        width: 2.5rem
+      }
   }
 }
 
@@ -163,11 +194,10 @@ nav{
         align-items: center;
         
         & .item-mp{
-          background: yellow;
           min-width: 2.5rem;
           min-height: 2.5rem;
           border-radius: 45px;
-          box-shadow: -1px 1.5px #555;
+          box-shadow: -1px 1.5px 2px 1px #555;
           align-content: center;
         }
       }
@@ -175,7 +205,7 @@ nav{
 }
 
 .note{
-  background: linear-gradient(to right, rgb(253, 104, 4) 5%, rgb(173, 173, 173) 5% 100%);
+  background: linear-gradient(to right, rgb(253, 104, 4) 5%, rgb(201, 201, 201) 5% 100%);
   border-radius: 5px;
   
   & .notations{
@@ -202,7 +232,7 @@ nav{
   & .item-categoria{
     border-radius: 20px;
     padding: .25rem .5rem;
-    background-color: rgb(199, 199, 199);
+    background-color: rgb(230, 229, 229);
     box-shadow: -0.5px 1.5px 3px #868686, -0.5px 1.5px 4px 2px #979797;
   }
 }
