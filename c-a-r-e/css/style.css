@@ -7,6 +7,7 @@
 }
 
 body{
+    height: ;
     font-family: "Poppins", Helvetica, Arial, sans-serif ;
     color: #111;
 }
@@ -23,3 +24,62 @@ img{
     display: block;
     max-width: 100%;
 }
+
+.menu-bg{
+    background: #3a9ddf;
+}
+
+.menu{
+    padding: .5em 0;
+    margin: 0 .5em ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+/* .menu-logo{
+    margin: 0 10px;
+    align-self: ;
+} */
+
+.menu-nav ul{
+    margin: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.menu-item{
+    max-width: 150px;
+    
+    & a{
+        padding: .5rem;
+        font-size: 1.25em;
+        display: block;
+    }
+}
+.main-container-bg{
+    background-color: aquamarine;
+    min-height: 100%;
+}
+
+.main-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.side-menu-bg, .ad-venue-bg{
+    background: #b34b4b;
+
+}
+
+.side-menu{
+    position: absolute;left: 0;
+    width: 276.6px;
+    padding: 0 1.25em;
+}
+
+.ad-venue
