@@ -30,7 +30,7 @@ img{
 }
 
 .menu{
-    padding: .5em 0;
+    height: 4rem;
     margin: 0 .5em ;
     display: flex;
     flex-wrap: wrap;
@@ -44,11 +44,18 @@ img{
     align-self: ;
 } */
 
-.menu-nav ul{
-    margin: 0 10px;
-    display: flex;
-    flex-wrap: wrap;
+.menu-nav{
+    height: 100%;
     align-items: center;
+
+    & ul{
+        height: inherit;
+        margin: 0 10px;
+        
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        }
 }
 
 .menu-item{
@@ -60,26 +67,98 @@ img{
         display: block;
     }
 }
-.main-container-bg{
-    background-color: aquamarine;
-    min-height: 100%;
-}
+
 
 .main-container{
+    background-color: aquamarine;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    height: calc(100vh - 7rem);
 }
 
-.side-menu-bg, .ad-venue-bg{
+.side-container{
+    flex: 1;
     background: #b34b4b;
-
+    max-width: 250px;
+    max-height: 100%;
 }
 
 .side-menu{
-    position: absolute;left: 0;
-    width: 276.6px;
-    padding: 0 1.25em;
+    padding: .5em 1.25rem;
+    height: 100%;
+    
+
+    & li{
+        font-size: 1.25em;
+        line-height: 2;
+        align-items: center;
+        
+        & a{
+            padding: 10px 0;
+            display: block;
+        }
+    }
+
+    li+li{
+        border-top: 2px solid;
+    }
 }
 
-.ad-venue
+.content{
+    flex: 4;
+    min-width: 230px;
+    padding:1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.tip-display{
+    min-width: 210px;
+    max-width: 613px;
+    margin: 0 auto;
+    padding: .5rem;
+    border: 2px solid;
+
+    font-size: 1.25em;
+    font-style: italic;
+    color: #3b3b3b;
+}
+
+.content-container{
+    /* min-width: calc(max-content + 20px); */
+    /* margin: 0 auto; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+
+.card{
+    flex: 1 1 450px;
+    display: flex;
+    flex-direction: column;
+    max-width: 455px;
+    
+    & .card-title{
+        padding: 0 .5rem;
+        min-width: max-content;
+        
+        & h3{font-size: 1.5rem;}
+    }
+    
+    .card-content{
+        background-color: beige;
+        padding: .5rem;
+        flex: 1;
+        font-size: 1.25rem;
+    }
+}
+
+.reflection-prompt .card-content p{
+    font-style: oblique;
+    color: #111;
+}
+
