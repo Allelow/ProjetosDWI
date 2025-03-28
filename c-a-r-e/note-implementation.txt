@@ -1,3 +1,6 @@
+media querys
+page: 730, 520
+
 Main Frame // simple, soft but secure. Vivid enough to capitivate interest both mindwise and actionwise
 
 Quick Acess Menu
