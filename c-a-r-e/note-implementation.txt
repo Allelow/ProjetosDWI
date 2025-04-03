@@ -20,6 +20,10 @@ From where(local) it came
 
 
 Self CARE Main page // soft. darker when heavy topics.  Lighter color schemes
+#EAE6C9, #DBD387, #615B25
+#ACCED7, #79C6DB, #2C7C8F
+#A28ED7, #6246AE, #230D5F
+#DCB7C9, #DA83AF, #5C2140
 Relationship CARE Main Page // more vivid, passionate. Change tonality for thoughtfull topics and action dinamic topics
 Habitual CARE Main Page // grounded, sharp, serious, not to serious, tone. Focus on progression, changes to enphasize that
 
